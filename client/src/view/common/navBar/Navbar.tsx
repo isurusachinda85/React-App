@@ -5,9 +5,10 @@ export class Navbar extends Component {
         return (
 
             <>
-                <div className="flex">
-                    <img className="w-[60px]" src={logo} alt=""/>
-                    <h1>Techno Mobile</h1>
+                <div className="p-3 flex">
+                    <img className="w-[70px]" src={logo} alt=""/>
+                    <h1 className="mt-2.5 text-[20px] text-[#0243E9] font-bold">Techno Mobile</h1>
+
                     {/*<ul className="list-none flex ml-5">
                         <li className="mr-5 text-[16px] text-[#e6f0e6]">Home</li>
 
