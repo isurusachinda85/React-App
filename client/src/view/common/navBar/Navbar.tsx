@@ -36,24 +36,24 @@ export class Navbar extends Component {
 
 
                 <div className="p-4 bg-[#2560F8]">
-                    <ul className="list-none flex ml-5 justify-center">
-                        <li className="mr-5 text-[16px] text-[#e6f0e6]">
+                    <ul className="list-none flex justify-center text-[#e6f0e6] text-[17px] font-bold">
+                        <li className="mr-10 hover:text-black  duration-500">
                             <Link to="/">Home</Link>
                         </li>
 
-                        <li className="mr-5 text-[16px] text-[#e6f0e6]">
+                        <li className="mr-10 hover:text-black duration-500">
                             <Link to="/mobilephone">Mobile Phones</Link>
                         </li>
 
-                        <li className="mr-5 text-[16px] text-[#e6f0e6]">
+                        <li className="mr-10 hover:text-black duration-500">
                             <Link to="/accessories">Accessories</Link>
                         </li>
 
-                        <li className="mr-5 text-[16px] text-[#e6f0e6]">
+                        <li className="mr-10 hover:text-black duration-500">
                             <Link to="/aboutus">About Us</Link>
                         </li>
 
-                        <li className="mr-5 text-[16px] text-[#e6f0e6]">
+                        <li className="mr-10 hover:text-black duration-500">
                             <Link to="/contactus">Contact Us</Link>
                         </li>
                     </ul>
