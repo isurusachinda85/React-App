@@ -36,7 +36,7 @@ export class Navbar extends Component {
 
                     <div>
                         <Button className="h-full" startIcon={<AccountCircleIcon />}>
-                            welcome user
+                            <Link to="/user">welcome user</Link>
                         </Button>
                     </div>
 

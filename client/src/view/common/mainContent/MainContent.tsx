@@ -6,6 +6,7 @@ import {Accessories} from "../../pages/accessories/Accessories";
 import {AboutUS} from "../../pages/aboutUs/AboutUS";
 import {ContactUS} from "../../pages/contactUs/ContactUS";
 import {MyCart} from "../../pages/mycart/MyCart";
+import {User} from "../../pages/user/User";
 
 export class MainContent extends Component {
     render() {
@@ -18,6 +19,7 @@ export class MainContent extends Component {
                     <Route path="/aboutus" Component={AboutUS}></Route>
                     <Route path="/contactus" Component={ContactUS}></Route>
                     <Route path="/mycart" Component={MyCart}></Route>
+                    <Route path="/user" Component={User}></Route>
                 </Routes>
             </div>
         );
