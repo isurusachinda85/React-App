@@ -5,6 +5,25 @@ export class Home extends Component {
         return (
             <>
                 <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
+                <h1 className="text-5xl text-center ">Home</h1>
             </>
         );
     }

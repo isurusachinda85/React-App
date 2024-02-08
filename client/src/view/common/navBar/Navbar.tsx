@@ -7,7 +7,7 @@ export class Navbar extends Component {
         return (
 
             <>
-                <nav className="p-5 flex justify-between  ">
+                <nav className="p-5 flex justify-between ">
 
                     <div className="flex space-x-1">
                         <img className="w-[70px] " src={logo} alt=""/>
@@ -35,7 +35,7 @@ export class Navbar extends Component {
                 </nav>
 
 
-                <div className="p-4 bg-[#2560F8]">
+                <div className="p-4 bg-[#2560F8] ">
                     <ul className="list-none flex justify-center text-[#e6f0e6] text-[17px] font-bold">
                         <li className="mr-10 hover:text-black  duration-500">
                             <Link to="/">Home</Link>
