@@ -42,32 +42,32 @@ export class Navbar extends Component {
 
 
                     <div className="h-full flex items-center">
-                        <IconButton aria-label="cart">
-                            <Link to="/mycart">
+                        <Link to="/mycart">
+                            <IconButton aria-label="cart">
                                 <StyledBadge badgeContent={5} color="error">
                                     <AddShoppingCartIcon/>
                                 </StyledBadge>
-                            </Link>
-                        </IconButton>
+                            </IconButton>
+                        </Link>
                     </div>
 
 
                     <div className="h-full flex items-center">
-                        <Button className="h-12" startIcon={<AccountCircleIcon/>}>
-                            <Link to="/user">welcome user</Link>
-                        </Button>
+                        <Link to="/user">
+                            <Button className="h-12" startIcon={<AccountCircleIcon/>}>welcome user</Button>
+                        </Link>
                     </div>
 
                     <div className="h-full flex items-center">
-                        <Button className="h-12 w-28" size="medium">
-                            <Link to="/login">Login</Link>
-                        </Button>
+                        <Link to="/login">
+                            <Button className="h-12 w-28" size="medium">Login</Button>
+                        </Link>
                     </div>
 
                     <div className="h-full flex items-center">
-                        <Button className="h-12 w-28" size="medium">
-                            <Link to="/signup">Sign Up</Link>
-                        </Button>
+                        <Link to="/signup">
+                            <Button className="h-12 w-28" size="medium">Sign Up</Button>
+                        </Link>
                     </div>
 
                 </nav>
@@ -84,7 +84,8 @@ export class Navbar extends Component {
                         <li className="group relative hover:text-black cursor-pointer duration-500 flex items-center ">
 
                             Mobile Phones <ArrowDropDownOutlinedIcon/>
-                            <div className="absolute -left-2 top-6 z-[99999]  hidden w-[150px] bg-white p-2 group-hover:block">
+                            <div
+                                className="absolute -left-2 top-6 z-[1]  hidden w-[150px] bg-white p-2 group-hover:block">
                                 <ul className="space-y-3 pt-5">
                                     <li>
                                         <Link to="/mobilephone">Apple</Link>
