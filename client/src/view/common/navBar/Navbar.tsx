@@ -25,23 +25,22 @@ export class Navbar extends Component {
 
             <>
                 {/*Nav 01*/}
-                <nav className="p-4 h-24 flex justify-between items-center">
+                <nav className="border border-black p-4 h-24 flex justify-between items-center">
 
-                    <div className="flex items-center h-full space-x-1">
+                    <div className=" flex items-center h-full space-x-1">
                         <img className="w-[70px] " src={logo} alt=""/>
-                        <h1 className="text-[20px] text-[#0243E9] font-bold">Techno Mobile</h1>
+                        <h1 className="text-[20px]  font-bold">Techno<span className={"text-[#09bafa] text-[30px]"}>Mobile</span></h1>
                     </div>
 
-                    <div className="w-[43%] h-full flex items-center">
-                        <input
-                            className="pl-2 float-right w-full h-12 border-[2px] border-[#2560F8] border-r-0 rounded rounded-r-none focus:outline-none"
+                    <div className=" w-[43%] h-full flex items-center">
+                        <input className="pl-2 float-right w-full h-12 border-[2px]  border-r-0 rounded rounded-r-none focus:outline-none"
                             type="text"
                             placeholder="Search items"/>
-                        <button className="rounded-r bg-[#2560F8] h-12 text-white w-32">{<SearchIcon/>}</button>
+                        <button className="rounded-r bg-[#09bafa] h-12 text-white w-32">{<SearchIcon/>}</button>
                     </div>
 
 
-                    <div className="h-full flex items-center">
+                    <div className=" h-full flex items-center">
                         <Link to="/mycart">
                             <IconButton aria-label="cart">
                                 <StyledBadge badgeContent={5} color="error">
@@ -52,30 +51,32 @@ export class Navbar extends Component {
                     </div>
 
 
-                    <div className="h-full flex items-center">
+                    <div className=" h-full flex items-center">
                         <Link to="/user">
                             <Button className="h-12" startIcon={<AccountCircleIcon/>}>welcome user</Button>
                         </Link>
                     </div>
 
-                    <div className="h-full flex items-center">
+                    <div className=" h-full flex items-center">
                         <Link to="/login">
-                            <Button className="h-12 w-28" size="medium">Login</Button>
+                            <Button className="h-10 w-28" variant="outlined" size="small">Login</Button>
                         </Link>
-                    </div>
 
-                    <div className="h-full flex items-center">
+                        
+                    </div>
+                    <div className=" h-full flex items-center">
+                        
+
                         <Link to="/signup">
-                            <Button className="h-12 w-28" size="medium">Sign Up</Button>
+                            <Button className="h-10 w-28" variant="contained" size="small">Sign Up</Button>
                         </Link>
                     </div>
-
                 </nav>
 
 
                 {/*Nav 02*/}
 
-                <div className="p-4 bg-[#2560F8]  ">
+                <div className="p-4 bg-[#09bafa]  ">
                     <ul className="list-none flex justify-center gap-12 text-[#e6f0e6] text-[17px] font-bold">
                         <li className="hover:text-black  duration-500">
                             <Link to="/">Home</Link>
@@ -85,7 +86,7 @@ export class Navbar extends Component {
 
                             Mobile Phones <ArrowDropDownOutlinedIcon/>
                             <div
-                                className="absolute -left-2 top-6 z-[1]  hidden w-[150px] bg-white p-2 group-hover:block">
+                                className="absolute -left-2 top-6 shadow-lg hidden w-[150px] bg-white p-2 group-hover:block">
                                 <ul className="space-y-3 pt-5">
                                     <li>
                                         <Link to="/mobilephone">Apple</Link>
