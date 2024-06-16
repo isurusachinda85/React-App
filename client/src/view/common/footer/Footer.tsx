@@ -15,7 +15,7 @@ import Deliva from "../../../image/delivary.png";
 export class Footer extends Component {
     render() {
         return (
-            <footer className="relative  bottom-0 h-[50vh] w-full bg-[#222324] ">
+            <footer className="h-[50vh] w-full bg-[#222324] ">
                 <div className=" h-[80%] w-[90%] ml-20 mr-20 flex flex-row justify-center">
                     <div className="h-full w-[30%] flex flex-col justify-around">
 

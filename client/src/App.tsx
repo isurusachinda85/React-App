@@ -1,10 +1,10 @@
 import React from 'react';
 
 import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {DefaultLayout} from "./view/common/defaultLayout/DefaultLayout";
-import {Login} from "./view/pages/login/Login";
-import {SignUp} from "./view/pages/signUp/SignUp";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { DefaultLayout } from "./view/common/defaultLayout/DefaultLayout";
+import { Login } from "./view/pages/login/Login";
+import { SignUp } from "./view/pages/signUp/SignUp";
 
 function App() {
     return (

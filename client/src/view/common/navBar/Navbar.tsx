@@ -25,7 +25,7 @@ export class Navbar extends Component {
 
             <>
                 {/*Nav 01*/}
-                <nav className="border border-black p-4 h-24 flex justify-between items-center">
+                <nav className="p-4 h-24 flex justify-between items-center">
 
                     <div className="flex items-center h-full space-x-1">
                         <img className="w-[70px] " src={logo} alt="" />
