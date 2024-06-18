@@ -37,7 +37,7 @@ export class SignUp extends Component<{}, InputAdornmentsState> {
             <>
                 <div className="w-[100vw] h-[100vh] flex items-center justify-center">
                     <div className="w-[27%] h-[80%] shadow-2xl ">
-                        <div className="w-full h-[12%]  font-bold text-[30px] pl-8 text-[#09bafa] flex items-center">
+                        <div className="w-full h-[12%]  font-bold text-[25px] pl-8 text-[#09bafa] flex items-center">
                             <h1>CREATE AN ACCOUNT</h1>
                         </div>
 
@@ -111,7 +111,7 @@ export class SignUp extends Component<{}, InputAdornmentsState> {
                             <CommonButton className="w-60" label="Sign in with google" variant="outlined" startIcon={<img src={Googlelogo} alt="Google Logo" className="w-[24px] h-[24px]" />} />
                             <h1 className="font-bold">Already have an account..?
                                 <Link to="/login">
-                                    <span className="text-[#09bafa] hover:underline">Login Now </span>
+                                    <span className="pl-1 text-[#09bafa] hover:underline">Login Now </span>
                                 </Link>
                             </h1>
                         </div>
