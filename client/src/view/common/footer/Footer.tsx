@@ -23,17 +23,17 @@ export class Footer extends Component {
                             <h1 className="text-[27px] text-white  font-bold">Techno<span className={"text-[#09bafa] text-[30px]"}>Mobile</span></h1>
                         </div>
 
-                        <div className="w-full h-[45%] flex flex-col justify-around">
-                            <p className="font-bold text-[#909090]"><RoomOutlinedIcon className="mr-2 text-[#09bafa]" />Techno Mobile Galle 581/A, Gonapinuwala ,
+                        <div className="w-full h-[45%] flex flex-col justify-around  ">
+                            <p className="font-bold text-[#909090] hover:text-white transition duration-500"><RoomOutlinedIcon className="mr-2 text-[#09bafa]" />Techno Mobile Galle 581/A, Gonapinuwala ,
                                 <br /><span className="ml-8">Hikkaduwa.</span></p>
-                            <p className="font-bold text-[#909090]"><LocalPhoneOutlinedIcon className="text-[#09bafa] mr-2" />076 388 0467 , 077 558 0658</p>
-                            <p className="font-bold text-[#909090]"><EmailOutlinedIcon className="text-[#09bafa] mr-2" />technomobile@gmail.com</p>
+                            <p className="font-bold text-[#909090] hover:text-white transition duration-500"><LocalPhoneOutlinedIcon className="text-[#09bafa] mr-2" />076 388 0467 , 077 558 0658</p>
+                            <p className="font-bold text-[#909090] hover:text-white transition duration-500"><EmailOutlinedIcon className="text-[#09bafa] mr-2" />technomobile@gmail.com</p>
                         </div>
                         <div className="w-[75%] h-[20%] flex flex-row items-center justify-evenly gap-0">
-                            <div className="border border-[#909090] text-[#909090] cursor-pointer hover:bg-white hover:text-[#09bafa] rounded-full h-[43px] w-[43px] flex items-center justify-center"><WhatsAppIcon fontSize="medium" /></div>
-                            <div className="border border-[#909090] text-[#909090] cursor-pointer hover:bg-white hover:text-[#09bafa] rounded-full h-[43px] w-[43px] flex items-center justify-center"><FacebookRoundedIcon fontSize="medium" /></div>
-                            <div className="border border-[#909090] text-[#909090] cursor-pointer hover:bg-white hover:text-[#09bafa] rounded-full h-[43px] w-[43px] flex items-center justify-center"><XIcon fontSize="medium" /></div>
-                            <div className="border border-[#909090] text-[#909090] cursor-pointer hover:bg-white hover:text-[#09bafa] rounded-full h-[43px] w-[43px] flex items-center justify-center"><InstagramIcon fontSize="medium" /></div>
+                            <div className="border border-[#909090] text-[#909090] cursor-pointer hover:bg-white hover:text-[#09bafa] transition duration-500 rounded-full h-[43px] w-[43px] flex items-center justify-center"><WhatsAppIcon fontSize="medium" /></div>
+                            <div className="border border-[#909090] text-[#909090] cursor-pointer hover:bg-white hover:text-[#09bafa] transition duration-500 rounded-full h-[43px] w-[43px] flex items-center justify-center"><FacebookRoundedIcon fontSize="medium" /></div>
+                            <div className="border border-[#909090] text-[#909090] cursor-pointer hover:bg-white hover:text-[#09bafa] transition duration-500 rounded-full h-[43px] w-[43px] flex items-center justify-center"><XIcon fontSize="medium" /></div>
+                            <div className="border border-[#909090] text-[#909090] cursor-pointer hover:bg-white hover:text-[#09bafa] transition duration-500 rounded-full h-[43px] w-[43px] flex items-center justify-center"><InstagramIcon fontSize="medium" /></div>
                         </div>
                     </div>
                     <div className="h-full w-[30%] flex flex-col justify-around">
@@ -42,10 +42,10 @@ export class Footer extends Component {
                         </div>
                         <div className="h-[70%] w-full ">
                             <ul className="font-bold text-[#909090] h-[70%] w-full pl-36 flex flex-col justify-around ">
-                                <li>Manage Account</li>
-                                <li>View Cart</li>
-                                <li>Orders</li>
-                                <li>Track Order</li>
+                                <li className=" hover:text-white transition duration-500">Manage Account</li>
+                                <li className=" hover:text-white transition duration-500">View Cart</li>
+                                <li className=" hover:text-white transition duration-500">Orders</li>
+                                <li className=" hover:text-white transition duration-500">Track Order</li>
                             </ul>
                         </div>
                     </div>
@@ -55,9 +55,9 @@ export class Footer extends Component {
                         </div>
                         <div className="h-[70%] w-full">
                             <ul className="font-bold text-[#909090] h-[53%] w-full pl-36 flex flex-col justify-around">
-                                <li>About US</li>
-                                <li>Contact US</li>
-                                <li>Privacy policy</li>
+                                <li className=" hover:text-white transition duration-500">About US</li>
+                                <li className=" hover:text-white transition duration-500">Contact US</li>
+                                <li className=" hover:text-white transition duration-500">Privacy policy</li>
                             </ul>
                         </div>
                     </div>
