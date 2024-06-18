@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import Badge, { BadgeProps } from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
+import CommonButton from "../Button/Button";
 
 const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -59,16 +60,15 @@ export class Navbar extends Component {
 
                     <div className="h-full flex items-center">
                         <Link to="/login">
-                            <Button className="h-10 w-28" variant="outlined" size="small">Login</Button>
+                            {/* <Button className="h-10 w-28" variant="outlined" size="small">Login</Button> */}
+                            <CommonButton className="h-10 w-28" variant="outlined" label="Login" />
                         </Link>
-
-
                     </div>
+
                     <div className="h-full flex items-center">
-
-
                         <Link to="/signup">
-                            <Button className="h-10 w-28" variant="contained" size="small">Sign Up</Button>
+                            {/* <Button className="h-10 w-28" variant="contained" size="small">Sign Up</Button> */}
+                            <CommonButton className="h-10 w-28" variant="contained" label="Sign Up" />
                         </Link>
                     </div>
                 </nav>
