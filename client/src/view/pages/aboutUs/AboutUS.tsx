@@ -1,10 +1,14 @@
-import {Component} from "react";
+import { Component } from "react";
 
 export class AboutUS extends Component {
     render() {
         return (
             <>
-            <h1 className="text-5xl text-center ">About Us</h1>
+                <div className="border border-black h-[100vh]">
+                    <div>
+                        <h1 className="text-5xl text-center ">About Us</h1>
+                    </div>
+                </div>
             </>
         );
     }
