@@ -68,7 +68,7 @@ export class Navbar extends Component {
                     <div className="h-full flex items-center">
                         <Link to="/signup">
                             {/* <Button className="h-10 w-28" variant="contained" size="small">Sign Up</Button> */}
-                            <CommonButton className="h-10 w-28" variant="contained" label="Sign Up" />
+                            <CommonButton className="h-10 w-28" variant="contained" label="Sign Up" style={{ background: "#09bafa" }} />
                         </Link>
                     </div>
                 </nav>
