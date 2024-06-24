@@ -60,11 +60,11 @@ export class Home extends Component {
             { url: im3, title: "Image 1" },
             { url: im4, title: "Image 1" },
         ];
+
         return (
             <>
-
+                {/* image slider */}
                 <div className="h-[300vh]">
-
                     <Box className="mt-5 w-full h-[500px]  pr-32 pl-32">
                         {<Slider {...settings} className="w-[100%] h-[500px] ">
                             {images.map((image, index) => (
@@ -75,10 +75,7 @@ export class Home extends Component {
                             ))}
                         </Slider>}
                     </Box>
-
                 </div>
-
-
             </>
         );
     }
