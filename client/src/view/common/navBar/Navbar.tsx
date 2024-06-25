@@ -86,7 +86,7 @@ export class Navbar extends Component {
 
                             Mobile Phones <ArrowDropDownOutlinedIcon />
                             <div
-                                className="absolute -left-2 top-6 shadow-lg hidden w-[150px] bg-white p-2 group-hover:block">
+                                className="absolute -left-2 top-6 shadow-lg hidden z-10 w-[150px] bg-white p-2 group-hover:block">
                                 <ul className="space-y-3 pt-5">
                                     <li>
                                         <Link to="/mobilephone">Apple</Link>
