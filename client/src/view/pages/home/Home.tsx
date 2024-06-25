@@ -86,8 +86,8 @@ export class Home extends Component {
                     <div className="w-full h-32 mt-20 flex flex-row pr-32 pl-32 gap-4">
                         <div className="border shadow-lg w-[25%] h-full flex flex-row">
                             <div className="w-[40%] h-full flex justify-center items-center">
-                                <div className="border border-[#09bafa] rounded-full h-[80px] w-[80px]  text-[#09bafa] flex items-center justify-center">
-                                    <LocalShippingOutlinedIcon sx={{ fontSize: 50 }} />
+                                <div className="border border-[#09bafa] rounded-full h-[75px] w-[75px]  text-[#09bafa] flex items-center justify-center">
+                                    <LocalShippingOutlinedIcon sx={{ fontSize: 40 }} />
                                 </div>
                             </div>
 
@@ -102,8 +102,8 @@ export class Home extends Component {
 
                         <div className="border shadow-lg w-[25%] h-full flex flex-row">
                             <div className="w-[40%] h-full flex justify-center items-center">
-                                <div className="border border-[#09bafa] rounded-full h-[80px] w-[80px]  text-[#09bafa] flex items-center justify-center">
-                                    <CurrencyExchangeIcon sx={{ fontSize: 50 }} />
+                                <div className="border border-[#09bafa] rounded-full h-[75px] w-[75px]  text-[#09bafa] flex items-center justify-center">
+                                    <CurrencyExchangeIcon sx={{ fontSize: 40 }} />
                                 </div>
                             </div>
 
@@ -117,8 +117,8 @@ export class Home extends Component {
 
                         <div className="border shadow-lg w-[25%] h-full flex flex-row">
                             <div className="w-[40%] h-full flex justify-center items-center">
-                                <div className="border border-[#09bafa] rounded-full h-[80px] w-[80px]  text-[#09bafa] flex items-center justify-center">
-                                    <GppGoodOutlinedIcon sx={{ fontSize: 50 }} />
+                                <div className="border border-[#09bafa] rounded-full h-[75px] w-[75px]  text-[#09bafa] flex items-center justify-center">
+                                    <GppGoodOutlinedIcon sx={{ fontSize: 40 }} />
                                 </div>
                             </div>
 
@@ -132,8 +132,8 @@ export class Home extends Component {
 
                         <div className="border shadow-lg w-[25%] h-full flex flex-row">
                             <div className="w-[40%] h-full flex justify-center items-center">
-                                <div className="border border-[#09bafa] rounded-full h-[80px] w-[80px]  text-[#09bafa] flex items-center justify-center">
-                                    <HeadsetMicOutlinedIcon sx={{ fontSize: 50 }} />
+                                <div className="border border-[#09bafa] rounded-full h-[75px] w-[75px]  text-[#09bafa] flex items-center justify-center">
+                                    <HeadsetMicOutlinedIcon sx={{ fontSize: 40 }} />
                                 </div>
                             </div>
 
