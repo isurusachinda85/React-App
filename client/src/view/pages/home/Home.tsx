@@ -10,6 +10,11 @@ import im3 from "../../../image/slider/im3.jpg";
 import im4 from "../../../image/slider/im4.jpg";
 import CommonButton from "../../common/Button/Button";
 
+import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
+import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
+
 interface ArrowProps {
     className?: string;
     style?: React.CSSProperties;
@@ -64,7 +69,7 @@ export class Home extends Component {
         return (
             <>
                 {/* image slider */}
-                <div className="h-[300vh]">
+                <div className="h-[400vh]">
                     <Box className="mt-5 w-full h-[500px]  pr-32 pl-32">
                         {<Slider {...settings} className="w-[100%] h-[500px] ">
                             {images.map((image, index) => (
@@ -75,6 +80,72 @@ export class Home extends Component {
                             ))}
                         </Slider>}
                     </Box>
+
+
+                    {/* deatails */}
+                    <div className="w-full h-32 mt-20 flex flex-row pr-32 pl-32 gap-4">
+                        <div className="border shadow-lg w-[25%] h-full flex flex-row">
+                            <div className="w-[40%] h-full flex justify-center items-center">
+                                <div className="border border-[#09bafa] rounded-full h-[80px] w-[80px]  text-[#09bafa] flex items-center justify-center">
+                                    <LocalShippingOutlinedIcon sx={{ fontSize: 50 }} />
+                                </div>
+                            </div>
+
+                            <div className="h-full w-[60%] flex flex-col items-center justify-center">
+                                <div className="w-full h-[60%]">
+                                    <h1 className="font-bold text-[20px]">Free shipping</h1>
+                                    <h1>Free Shipping On All Order</h1>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="border shadow-lg w-[25%] h-full flex flex-row">
+                            <div className="w-[40%] h-full flex justify-center items-center">
+                                <div className="border border-[#09bafa] rounded-full h-[80px] w-[80px]  text-[#09bafa] flex items-center justify-center">
+                                    <CurrencyExchangeIcon sx={{ fontSize: 50 }} />
+                                </div>
+                            </div>
+
+                            <div className="h-full w-[60%] flex flex-col items-center justify-center">
+                                <div className="w-full h-[60%]">
+                                    <h1 className="font-bold text-[20px]">Money Returns</h1>
+                                    <h1>30 Days money return</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="border shadow-lg w-[25%] h-full flex flex-row">
+                            <div className="w-[40%] h-full flex justify-center items-center">
+                                <div className="border border-[#09bafa] rounded-full h-[80px] w-[80px]  text-[#09bafa] flex items-center justify-center">
+                                    <GppGoodOutlinedIcon sx={{ fontSize: 50 }} />
+                                </div>
+                            </div>
+
+                            <div className="h-full w-[60%] flex flex-col items-center justify-center">
+                                <div className="w-full h-[60%]">
+                                    <h1 className="font-bold text-[20px]">Payment Secure</h1>
+                                    <h1>We ensure secure payment</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="border shadow-lg w-[25%] h-full flex flex-row">
+                            <div className="w-[40%] h-full flex justify-center items-center">
+                                <div className="border border-[#09bafa] rounded-full h-[80px] w-[80px]  text-[#09bafa] flex items-center justify-center">
+                                    <HeadsetMicOutlinedIcon sx={{ fontSize: 50 }} />
+                                </div>
+                            </div>
+
+                            <div className="h-full w-[60%] flex flex-col items-center justify-center">
+                                <div className="w-full h-[60%]">
+                                    <h1 className="font-bold text-[20px]">Support 24/ 7</h1>
+                                    <h1>Contact us 24 hours a day</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </>
         );
