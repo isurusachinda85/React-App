@@ -14,6 +14,10 @@ import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
+import mobile from "../../../image/mobile.png"
+import laptop from "../../../image/laptop.png"
+import tablet from "../../../image/tablet.png"
+import accessoris from "../../../image/access.png"
 
 interface ArrowProps {
     className?: string;
@@ -145,6 +149,37 @@ export class Home extends Component {
                             </div>
                         </div>
 
+                    </div>
+
+                    {/* Our product */}
+                    <div className="w-full h-48 mt-20 flex flex-row pr-32 pl-32">
+                        <div className="h-full w-[25%] flex flex-col justify-center items-center gap-3">
+                            <div className="  rounded-full w-[150px] h-[150px] flex items-center justify-center bg-[#f8f9fa] ">
+                                <img className="w-[100px]" src={mobile} alt="" />
+                            </div>
+                            <div className="font-bold"><h1>Mobile Phone</h1></div>
+                        </div>
+
+                        <div className="h-full w-[25%] flex flex-col justify-center items-center gap-3 ">
+                            <div className="rounded-full w-[150px] h-[150px] flex items-center justify-center bg-[#f8f9fa] ">
+                                <img className="w-[150px]" src={laptop} alt="" />
+                            </div>
+                            <div className="font-bold"><h1>Computer & Laptop</h1></div>
+                        </div>
+
+                        <div className="h-full w-[25%] flex flex-col justify-center items-center gap-3">
+                            <div className="rounded-full w-[150px] h-[150px] flex items-center justify-center bg-[#f8f9fa] ">
+                                <img className="w-[100px]" src={tablet} alt="" />
+                            </div>
+                            <div className="font-bold"><h1>Tablet</h1></div>
+                        </div>
+
+                        <div className="h-full w-[25%] flex flex-col justify-center items-center gap-3">
+                            <div className="rounded-full w-[150px] h-[150px] flex items-center justify-center bg-[#f8f9fa] ">
+                                <img className="w-[130px]" src={accessoris} alt="" />
+                            </div>
+                            <div className="font-bold"><h1>Accessories</h1></div>
+                        </div>
                     </div>
                 </div>
             </>
