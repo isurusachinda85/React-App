@@ -9,6 +9,8 @@ import im2 from "../../../image/slider/im2.jpg";
 import im3 from "../../../image/slider/im3.jpg";
 import im4 from "../../../image/slider/im4.jpg";
 import CommonButton from "../../common/Button/Button";
+import iphone13 from "../../../image/iphone13.png"
+import samsung from "../../../image/sam1.png"
 
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
@@ -18,6 +20,8 @@ import mobile from "../../../image/mobile.png"
 import laptop from "../../../image/laptop.png"
 import tablet from "../../../image/tablet.png"
 import accessoris from "../../../image/access.png"
+import Product from "../../common/product/Product";
+import BrandSlider from "../../common/BrandSlider/BrandSlider";
 
 interface ArrowProps {
     className?: string;
@@ -73,7 +77,7 @@ export class Home extends Component {
         return (
             <>
                 {/* image slider */}
-                <div className="h-[400vh]">
+                <div className="h-[550vh]">
                     <Box className="mt-5 w-full h-[500px]  pr-32 pl-32">
                         {<Slider {...settings} className="w-[100%] h-[500px] ">
                             {images.map((image, index) => (
@@ -181,6 +185,49 @@ export class Home extends Component {
                             <div className="font-bold"><h1>Accessories</h1></div>
                         </div>
                     </div>
+
+                    <Product title="Our Product" />
+
+                    {/* sale product image */}
+                    <div className="w-full h-[350px] mt-20 pl-32 pr-32 flex flex-row gap-12">
+                        {/* sale product image 1 */}
+                        <div className="w-[50%] h-full bg-[#bdc3c7] flex flex-row">
+                            <div className="w-[60%] h-full flex items-center justify-center">
+                                <div className="w-[80%] h-[50%]">
+                                    <p className="w-full text-[18px]">Get up to 50% off Today</p>
+                                    <h1 className="w-full font-bold text-[30px]">iPhone 13 Pro Max</h1>
+                                    <div className="w-full mt-5">
+                                        <CommonButton label="shop now" style={{ background: "#09bafa" }} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-[40%] h-full flex items-center justify-center">
+                                <img src={iphone13} alt="" />
+                            </div>
+                        </div>
+
+                        {/* sale product image 2 */}
+                        <div className="w-[50%] h-full bg-[#8ed1fb] flex flex-row">
+                            <div className="w-[60%] h-full flex items-center justify-center">
+                                <div className="w-[80%] h-[50%]">
+                                    <p className="w-full text-[18px]">Get up to 50% off Today</p>
+                                    <h1 className="w-full font-bold text-[30px]">Samsung Galaxy S23 Ultra</h1>
+                                    <div className="w-full mt-5">
+                                        <CommonButton label="shop now" style={{ background: "#09bafa" }} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-[40%] h-full flex items-center justify-center">
+                                <img src={samsung} alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <Product title="Mobile Phone" />
+
+                    <Product title="Accessories" />
+
+                    <BrandSlider />
                 </div>
             </>
         );
