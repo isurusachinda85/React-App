@@ -22,7 +22,7 @@ export default class BrandSlider extends Component {
         return (
             <>
                 <div className='w-full h-36 mt-20 pl-32 pr-32'>
-                    <div className='border border-[#09bafa] h-full w-full'>
+                    <div className='border h-full w-full'>
                         <Slider {...settings} className='h-full '>
                             <div className='h-[144px]'>
                                 <div className='w-full h-full flex justify-center items-center'>
