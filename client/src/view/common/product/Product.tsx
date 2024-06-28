@@ -57,7 +57,7 @@ export default class Product extends Component<ProductProps> {
             <>
                 <div className='w-full h-[610px] mt-20 pl-32 pr-32'>
                     <div className='w-full h-[10%] font-bold text-3xl flex items-center justify-center'>
-                        <h1 className='  border-b-[3px] border-b-[#09bafa] pb-2'>{this.props.title}</h1>
+                        <h1 className='border-b-[3px] border-b-[#09bafa] pb-2'>{this.props.title}</h1>
                     </div>
                     <div className='w-full h-[90%] pt-5 '>
 
