@@ -20,7 +20,7 @@ import mobile from "../../../image/mobile.png"
 import laptop from "../../../image/laptop.png"
 import tablet from "../../../image/tablet.png"
 import accessoris from "../../../image/access.png"
-import Product from "../../common/product/Product";
+import ProductSlider from "../../common/productSlider/ProductSlider";
 import BrandSlider from "../../common/BrandSlider/BrandSlider";
 
 interface ArrowProps {
@@ -186,7 +186,7 @@ export class Home extends Component {
                         </div>
                     </div>
 
-                    <Product title="Our Product" />
+                    <ProductSlider title="Our Product" />
 
                     {/* sale product image */}
                     <div className="w-full h-[350px] mt-20 pl-32 pr-32 flex flex-row gap-12">
@@ -223,9 +223,9 @@ export class Home extends Component {
                         </div>
                     </div>
 
-                    <Product title="Mobile Phone" />
+                    {/* <ProductSlider title="Mobile Phone" />
 
-                    <Product title="Accessories" />
+                    <ProductSlider title="Accessories" /> */}
 
                     <BrandSlider />
                 </div>
