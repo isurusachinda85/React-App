@@ -12,16 +12,27 @@ import Googlelogo from "../../../image/google.png";
 import { Link } from "react-router-dom";
 
 
-interface InputAdornmentsState {
+
+interface SignupState {
     showPassword: boolean;
+    username: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
 }
 
-export class SignUp extends Component<{}, InputAdornmentsState> {
-    constructor(props: {}) {
+export class SignUp extends Component<{}, SignupState> {
+    constructor(props: any) {
         super(props)
         this.state = {
             showPassword: false,
+            //formdata
+            username: "",
+            email: "",
+            password: "",
+            confirmPassword: ""
         }
+
         this.handleClickShowPassword = this.handleClickShowPassword.bind(this);
 
     }
@@ -46,6 +57,10 @@ export class SignUp extends Component<{}, InputAdornmentsState> {
                             <TextField
                                 fullWidth
                                 placeholder="Username"
+                                value={this.state.username}
+                                onChange={(e) => {
+                                    this.setState({ username: e.target.value })
+                                }}
                                 InputProps={{
                                     startAdornment: <AccountCircleOutlinedIcon className="mr-5 text-[#09bafa]" />,
                                 }}
@@ -54,6 +69,11 @@ export class SignUp extends Component<{}, InputAdornmentsState> {
                             <TextField
                                 fullWidth
                                 placeholder="Email"
+                                type="email"
+                                value={this.state.email}
+                                onChange={(e) => {
+                                    this.setState({ email: e.target.value })
+                                }}
                                 InputProps={{
                                     startAdornment: <EmailOutlinedIcon className="mr-5 text-[#09bafa]" />,
                                 }}
@@ -64,6 +84,10 @@ export class SignUp extends Component<{}, InputAdornmentsState> {
                                 fullWidth
                                 type={this.state.showPassword ? 'text' : 'password'}
                                 placeholder="Password"
+                                value={this.state.password}
+                                onChange={(e) => {
+                                    this.setState({ password: e.target.value })
+                                }}
                                 InputProps={{
                                     startAdornment: (
                                         <LockOutlinedIcon className="mr-5 text-[#09bafa]" />
@@ -87,6 +111,10 @@ export class SignUp extends Component<{}, InputAdornmentsState> {
                                 fullWidth
                                 type={this.state.showPassword ? 'text' : 'password'}
                                 placeholder="Confirm Password "
+                                value={this.state.confirmPassword}
+                                onChange={(e) => {
+                                    this.setState({ confirmPassword: e.target.value })
+                                }}
                                 InputProps={{
                                     startAdornment: (
                                         <LockOutlinedIcon className="mr-5 text-[#09bafa]" />
@@ -122,4 +150,3 @@ export class SignUp extends Component<{}, InputAdornmentsState> {
         );
     }
 }
-export default InputAdornmentsState;
