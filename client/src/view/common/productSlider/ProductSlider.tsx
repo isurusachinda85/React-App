@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Slider from "react-slick";
-import Card from '@mui/material/Card';
 import Product from '../Product/Product';
 
 /* interface ArrowProps {
@@ -67,19 +66,19 @@ export default class Productslider extends Component<ProductSliProps> {
                             </div>
 
                             <div className=''>
-                                <Card variant="outlined" className='h-[500px] w-[280px] shadow-md'>2</Card>
+                                <Product />
                             </div>
 
                             <div className=''>
-                                <Card variant="outlined" className='h-[500px] w-[280px] shadow-md'>3</Card>
+                                <Product />
                             </div>
 
                             <div className=''>
-                                <Card variant="outlined" className='h-[500px] w-[280px] shadow-md'>4</Card>
+                                <Product />
                             </div>
 
                             <div className=''>
-                                <Card variant="outlined" className='h-[500px] w-[280px] shadow-md'>5</Card>
+                                <Product />
                             </div>
 
                         </Slider>

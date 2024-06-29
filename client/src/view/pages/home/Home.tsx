@@ -223,9 +223,9 @@ export class Home extends Component {
                         </div>
                     </div>
 
-                    {/* <ProductSlider title="Mobile Phone" />
+                    <ProductSlider title="Mobile Phone" />
 
-                    <ProductSlider title="Accessories" /> */}
+                    <ProductSlider title="Accessories" />
 
                     <BrandSlider />
                 </div>
