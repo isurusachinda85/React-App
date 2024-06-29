@@ -10,27 +10,32 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import CommonButton from "../../common/Button/Button";
 import Googlelogo from "../../../image/google.png";
 import { Link } from "react-router-dom";
+import userService from "../../../service/UserService";
 
 
 
 interface SignupState {
     showPassword: boolean;
-    username: string;
-    email: string;
-    password: string;
-    confirmPassword: string;
+    formData: {
+        username: string;
+        email: string;
+        password: string;
+        confirmPassword: string;
+    }
 }
 
 export class SignUp extends Component<{}, SignupState> {
-    constructor(props: any) {
+    constructor(props: {}) {
         super(props)
         this.state = {
             showPassword: false,
-            //formdata
-            username: "",
-            email: "",
-            password: "",
-            confirmPassword: ""
+            formData: {
+                username: "",
+                email: "",
+                password: "",
+                confirmPassword: ""
+            }
+
         }
 
         this.handleClickShowPassword = this.handleClickShowPassword.bind(this);
@@ -40,7 +45,12 @@ export class SignUp extends Component<{}, SignupState> {
     handleClickShowPassword() {
         this.setState((prevState) => ({ showPassword: !prevState.showPassword }));
     }
+    createUser = async () => {
+        let formdata = this.state.formData;
+        let res = await userService.createUser(formdata);
+        console.log(res);
 
+    }
 
     render() {
 
@@ -57,9 +67,12 @@ export class SignUp extends Component<{}, SignupState> {
                             <TextField
                                 fullWidth
                                 placeholder="Username"
-                                value={this.state.username}
+                                value={this.state.formData.username}
                                 onChange={(e) => {
-                                    this.setState({ username: e.target.value })
+                                    let formdata = this.state.formData;
+                                    formdata.username = e.target.value;
+                                    // @ts-ignore
+                                    this.setState({ formdata })
                                 }}
                                 InputProps={{
                                     startAdornment: <AccountCircleOutlinedIcon className="mr-5 text-[#09bafa]" />,
@@ -70,9 +83,12 @@ export class SignUp extends Component<{}, SignupState> {
                                 fullWidth
                                 placeholder="Email"
                                 type="email"
-                                value={this.state.email}
+                                value={this.state.formData.email}
                                 onChange={(e) => {
-                                    this.setState({ email: e.target.value })
+                                    let formdata = this.state.formData;
+                                    formdata.email = e.target.value;
+                                    // @ts-ignore
+                                    this.setState({ formdata })
                                 }}
                                 InputProps={{
                                     startAdornment: <EmailOutlinedIcon className="mr-5 text-[#09bafa]" />,
@@ -84,9 +100,12 @@ export class SignUp extends Component<{}, SignupState> {
                                 fullWidth
                                 type={this.state.showPassword ? 'text' : 'password'}
                                 placeholder="Password"
-                                value={this.state.password}
+                                value={this.state.formData.password}
                                 onChange={(e) => {
-                                    this.setState({ password: e.target.value })
+                                    let formdata = this.state.formData;
+                                    formdata.password = e.target.value;
+                                    // @ts-ignore
+                                    this.setState({ formdata })
                                 }}
                                 InputProps={{
                                     startAdornment: (
@@ -111,9 +130,12 @@ export class SignUp extends Component<{}, SignupState> {
                                 fullWidth
                                 type={this.state.showPassword ? 'text' : 'password'}
                                 placeholder="Confirm Password "
-                                value={this.state.confirmPassword}
+                                value={this.state.formData.confirmPassword}
                                 onChange={(e) => {
-                                    this.setState({ confirmPassword: e.target.value })
+                                    let formdata = this.state.formData;
+                                    formdata.confirmPassword = e.target.value;
+                                    // @ts-ignore
+                                    this.setState({ formdata })
                                 }}
                                 InputProps={{
                                     startAdornment: (
@@ -135,7 +157,7 @@ export class SignUp extends Component<{}, SignupState> {
 
                         </div>
                         <div className="w-full h-[28%] flex flex-col items-center justify-evenly">
-                            <CommonButton className="w-60" label="Create Account" style={{ background: "#09bafa" }} />
+                            <CommonButton className="w-60" label="Create Account" style={{ background: "#09bafa" }} onClick={this.createUser} />
                             <CommonButton className="w-60" label="Sign in with google" variant="outlined" startIcon={<img src={Googlelogo} alt="Google Logo" className="w-[24px] h-[24px]" />} />
                             <h1 className="font-bold">Already have an account..?
                                 <Link to="/login">
