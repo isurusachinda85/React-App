@@ -47,8 +47,12 @@ export class SignUp extends Component<{}, SignupState> {
     }
     createUser = async () => {
         let formdata = this.state.formData;
-        let res = await userService.createUser(formdata);
-        console.log(res);
+        let res: any = await userService.createUser(formdata);
+        if (res.status === 201) {
+            console.log(res.data.message);
+        } else {
+            console.log(res.response.data.error);
+        }
 
     }
 

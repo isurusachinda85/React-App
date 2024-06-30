@@ -9,16 +9,27 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import CommonButton from "../../common/Button/Button";
 import Googlelogo from "../../../image/google.png"
 import { Link } from "react-router-dom";
+import UserService from "../../../service/UserService";
 
-interface InputAdornmentsState {
+interface LoginState {
     showPassword: boolean;
+    formData: {
+        username: string;
+        password: string;
+    }
 }
 
-export class Login extends Component<{}, InputAdornmentsState> {
+
+export class Login extends Component<{}, LoginState> {
+
     constructor(props: {}) {
         super(props)
         this.state = {
             showPassword: false,
+            formData: {
+                username: "",
+                password: "",
+            }
         }
         this.handleClickShowPassword = this.handleClickShowPassword.bind(this);
 
@@ -26,6 +37,25 @@ export class Login extends Component<{}, InputAdornmentsState> {
 
     handleClickShowPassword() {
         this.setState((prevState) => ({ showPassword: !prevState.showPassword }));
+    }
+
+
+    loginUser = async () => {
+
+        try {
+            let formdata = this.state.formData;
+            let res: any = await UserService.loginUser(formdata);
+            console.log(res);
+            localStorage.setItem('token', res.data.token);
+            if (res.status === 200) {
+                console.log("Login Success");
+
+            }
+
+        } catch (e) {
+            console.log("Login Faill");
+        }
+
     }
 
     render() {
@@ -41,6 +71,13 @@ export class Login extends Component<{}, InputAdornmentsState> {
                                 <TextField
                                     fullWidth
                                     placeholder="Username"
+                                    value={this.state.formData.username}
+                                    onChange={(e) => {
+                                        let formdata = this.state.formData;
+                                        formdata.username = e.target.value;
+                                        // @ts-ignore
+                                        this.setState({ formdata })
+                                    }}
                                     InputProps={{
                                         startAdornment: <AccountCircleOutlinedIcon className="mr-5 text-[#09bafa]" />,
                                     }}
@@ -50,6 +87,13 @@ export class Login extends Component<{}, InputAdornmentsState> {
                                     fullWidth
                                     type={this.state.showPassword ? 'text' : 'password'}
                                     placeholder="Password"
+                                    value={this.state.formData.password}
+                                    onChange={(e) => {
+                                        let formdata = this.state.formData;
+                                        formdata.password = e.target.value;
+                                        // @ts-ignore
+                                        this.setState({ formdata })
+                                    }}
                                     InputProps={{
                                         startAdornment: (
                                             <LockOutlinedIcon className="mr-5 text-[#09bafa]" />
@@ -73,7 +117,7 @@ export class Login extends Component<{}, InputAdornmentsState> {
                             </div>
                         </div>
                         <div className="w-full h-[35%] flex flex-col items-center justify-evenly">
-                            <CommonButton className="w-60" label="Login" style={{ background: "#09bafa" }} />
+                            <CommonButton className="w-60" label="Login" style={{ background: "#09bafa" }} onClick={this.loginUser} />
                             <CommonButton className="w-60" label="Sign in with google" variant="outlined" startIcon={<img src={Googlelogo} alt="Google Logo" className="w-[24px] h-[24px]" />} />
                             <h1 className="font-bold">Don't have an account..?
                                 <Link to="/signup">
